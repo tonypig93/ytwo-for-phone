@@ -1,0 +1,66 @@
+{
+  "name": "ytwo-for-phone",
+  "version": "0.0.0",
+  "author": "YTWO mobility",
+  "scripts": {
+    "clean": "ionic-app-scripts clean",
+    "build": "ionic-app-scripts build",
+    "lint": "ionic-app-scripts lint",
+    "ionic:build": "ionic-app-scripts build",
+    "serve": "ionic-app-scripts serve",
+    "prod": "ionic build ios --prod --aot --minifyjs --minifycss"
+  },
+  "dependencies": {
+    "@angular/common": "4.1.3",
+    "@angular/compiler": "4.1.3",
+    "@angular/compiler-cli": "4.1.3",
+    "@angular/core": "4.1.3",
+    "@angular/forms": "4.1.3",
+    "@angular/http": "4.1.3",
+    "@angular/platform-browser": "4.1.3",
+    "@angular/platform-browser-dynamic": "4.1.3",
+    "@ionic-native/core": "3.12.1",
+    "@ionic-native/network": "^4.1.0",
+    "@ionic-native/splash-screen": "3.12.1",
+    "@ionic-native/status-bar": "3.12.1",
+    "@ionic/storage": "2.0.1",
+    "@ngx-translate/core": "^7.0.0",
+    "@ngx-translate/http-loader": "^0.1.0",
+    "@types/jquery": "^3.2.7",
+    "ionic-angular": "3.5.0",
+    "ionicons": "3.0.0",
+    "jquery": "^3.2.1",
+    "masonry-layout": "^4.2.0",
+    "rxjs": "5.4.0",
+    "sw-toolbox": "3.6.0",
+    "zone.js": "0.8.12"
+  },
+  "devDependencies": {
+    "@ionic/app-scripts": "2.0.1",
+    "gulp": "^3.9.1",
+    "gulp-svgstore": "^6.1.0",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-inject": "^4.2.0",
+    "gulp-cheerio": "^0.6.2",
+    "gulp-rename": "^1.2.2",
+    "typescript": "2.3.4"
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-whitelist",
+    "cordova-plugin-console",
+    "cordova-plugin-statusbar",
+    "cordova-plugin-device",
+    "cordova-plugin-splashscreen",
+    "ionic-plugin-keyboard",
+    "cordova-plugin-network"
+  ],
+  "cordovaPlatforms": [
+    "ios",
+    {
+      "platform": "ios",
+      "version": "",
+      "locator": "ios"
+    }
+  ],
+  "description": "YTWO.Phone: An Ionic project"
+}

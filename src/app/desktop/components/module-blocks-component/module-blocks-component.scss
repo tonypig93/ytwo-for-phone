@@ -1,0 +1,42 @@
+module-blocks {
+    .card-title {
+        position: absolute;
+        top: 36%;
+        font-size: 2em;
+        width: 100%;
+        font-weight: 700;
+        color: #fff;
+    }
+    .card-subtitle {
+        font-size: 1em;
+        position: absolute;
+        top: 52%;
+        width: 100%;
+        color: #fff;
+    }
+    ion-card {
+        position: relative;
+        text-align: center;
+        box-shadow: none!important;
+    }
+    button {
+        display: block;
+        width: 100%;
+        border: 2px solid transparent;
+        transition: opacity 0.2s ease;
+    }
+    button.activated {
+        opacity: .85;
+    }
+    .module-block {
+        padding: 2px 0;
+        p {
+            margin-top: 5px;
+        }
+        p > y2-translate {
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.6em;
+        }
+    }
+}

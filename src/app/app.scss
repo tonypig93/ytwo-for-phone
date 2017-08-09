@@ -1,0 +1,68 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+@import './css/global.scss';
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+.bg-red {
+    background-color: $ytwo-red;
+}
+button.bg-red.activated {
+    border-color: #af281e;
+}
+.bg-black {
+    background-color: $ytwo-black;
+}
+button.bg-black.activated {
+    border-color: #444;
+}
+.bg-blue {
+    background-color: $ytwo-blue;
+}
+button.bg-blue.activated {
+    border-color: #00529e;
+}
+.bg-yellow {
+    background-color: $ytwo-yellow;
+}
+button.bg-yellow.activated {
+    border-color: #e0aa0e;
+}
+.toolbar-background {
+    background-color: $bar-blue;
+}
+.toolbar-title {
+    color: #fff;
+}
+ion-label {
+    line-height: 1.4;
+}
+.back-button-text {
+    color: #fff;
+}
+.back-button-icon {
+    color: #fff;
+}

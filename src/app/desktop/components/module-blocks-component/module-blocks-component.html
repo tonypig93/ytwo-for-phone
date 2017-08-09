@@ -1,0 +1,7 @@
+<ion-card *ngFor="let item of modules">
+    <button class="module-block {{item.cssClass}}">
+        <svg-icon [width]="'56px'" [height]="'56px'" [id]="item.icon"></svg-icon>
+        <p><y2-translate [text]="item.name"></y2-translate></p>
+    </button>
+    
+</ion-card>

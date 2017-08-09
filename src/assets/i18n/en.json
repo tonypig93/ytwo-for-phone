@@ -1,0 +1,38 @@
+{
+    "basic": {
+        "login": "Login",
+        "enter": "Start Now!",
+        "invalidUser": "Invalid username or password",
+        "company": {
+            "selectCompany": "Select Company",
+            "selectRole": "Select Role"
+        },
+        "server": "Server Config"
+    },
+    "platform": {
+        "loading": "Loading",
+        "backButtonText": "Back",
+        "alert": {
+            "ok": "OK",
+            "info": "Info",
+            "cancel": "Cancel"
+        },
+        "initialize": "Initialize",
+        "empty": ""
+    },
+    "desktop": {
+        "profiles": {
+            "title": "Profiles",
+            "setting": "Settings",
+            "changeCompany": "Company & Role",
+            "changeLanguage": "Language",
+            "logout": "Log out"
+        },
+        "modules": {
+            "title": "Modules",
+            "invoice": "Invoice",
+            "pes": "Delivery Notice",
+            "po": "Purchase Order"
+        }
+    }
+}

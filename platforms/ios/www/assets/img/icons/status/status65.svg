@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="16px" height="16px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g id="status">
+        <rect x="0" y="0" width="16" height="16" style="fill:#3f7ab7;"/>
+        <path d="M8.875,1.438c-5.25,0 -7.875,5.25 -7.875,8.75c0,0.874 1.75,2.624 2.625,-0.001c0.391,-1.174 2.625,-0.875 2.625,0.875c0,1.957 0.875,3.5 2.625,3.5c5.25,0 6.125,-4.375 6.125,-7c0,-2.625 -0.875,-6.125 -6.125,-6.125Zm0.438,10.719c-0.845,0 -1.532,-0.687 -1.532,-1.531c0,-0.844 0.687,-1.531 1.531,-1.531c0.845,0 1.532,0.687 1.532,1.531c0,0.844 -0.687,1.531 -1.532,1.531Zm-2.312,-8.156c1.104,0 2,0.896 2,2c0,1.104 -0.896,2 -2,2c-1.104,0 -2,-0.896 -2,-2c0,-1.104 0.896,-2 2,-2Zm5.062,3.906c-0.844,0 -1.531,-0.687 -1.531,-1.531c0,-0.844 0.687,-1.531 1.531,-1.531c0.845,0 1.532,0.687 1.532,1.531c0,0.844 -0.687,1.531 -1.532,1.531Z" style="fill:#fff;"/>
+    </g>
+</svg>

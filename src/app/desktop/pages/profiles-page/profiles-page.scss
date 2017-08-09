@@ -1,0 +1,12 @@
+@import '../../../css/global.scss';
+page-profiles-page {
+    ion-avatar {
+        border-radius: 18px;
+        border: 1px solid transparent;
+        background-color: $ytwo-blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+    }
+}

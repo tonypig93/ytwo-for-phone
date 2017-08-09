@@ -1,0 +1,39 @@
+  <ion-list>
+    <ion-list-header>
+      <y2-translate [text]="'desktop.profiles.setting'"></y2-translate>
+    </ion-list-header>
+
+    <button ion-item (click)="goTo('basic-company')">
+      <!--<ion-icon name="wifi" item-start color="primary"></ion-icon>-->
+      <ion-label>
+      <svg-icon [width]="'18px'" [height]="'18px'" [id]="'svg-icon-company'"></svg-icon>
+        <y2-translate [text]="'desktop.profiles.changeCompany'"></y2-translate>
+      </ion-label>
+    </button>
+
+    <button ion-item (click)="selectLanguage()">
+      <!--<ion-icon name="wifi" item-start color="primary"></ion-icon>-->
+      <ion-label>
+      <svg-icon [width]="'18px'" [height]="'18px'" [id]="'svg-icon-switch-language'"></svg-icon>
+        <y2-translate [text]="'desktop.profiles.changeLanguage'"></y2-translate>
+      </ion-label>
+      <ion-note item-end>{{currentLang.name}}</ion-note>
+    </button>
+
+    <!--<button ion-item (click)="goTo('basic-company')">
+      <ion-icon name="wifi" item-start color="primary"></ion-icon>
+      <ion-label>
+      
+        <y2-translate [text]="'desktop.profiles.changeLanguage'"></y2-translate>
+      </ion-label>
+    </button>-->
+  </ion-list>
+
+  <ion-list>
+    <button ion-item (click)="logout()">
+      <ion-icon name="log-out" item-start color="primary"></ion-icon>
+      <ion-label>
+        <y2-translate [text]="'desktop.profiles.logout'"></y2-translate>
+      </ion-label>
+    </button>
+  </ion-list>

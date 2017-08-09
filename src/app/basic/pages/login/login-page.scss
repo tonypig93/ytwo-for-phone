@@ -1,0 +1,31 @@
+@import '../../../css/global.scss';
+page-login-page {
+    ion-content {
+        background: repeating-linear-gradient(30deg, #79b, #79b 15px, #58a 0, #58a 30px) {
+            position: center center;
+            repeat: no-repeat;
+            size: cover;
+        }
+    }
+    .login-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    ion-list ion-item {
+        background-color: transparent!important;
+        border: none!important;
+        padding: 0!important;
+    }
+    .item-inner {
+        border-radius: 3px;
+        border-bottom: 0.55px solid #c8c7cc!important;
+        padding-left: 8px;
+    }
+    button.login-button {
+        border: 1px solid #fff;
+        position: relative;
+    }
+}

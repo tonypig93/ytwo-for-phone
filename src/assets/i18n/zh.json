@@ -1,0 +1,38 @@
+{
+    "basic": {
+        "login": "登录",
+        "enter": "开始使用！",
+        "invalidUser": "用户名或密码不正确",
+        "company": {
+            "selectCompany": "选择公司",
+            "selectRole": "选择角色"
+        },
+        "server": "服务器配置"
+    },
+    "platform": {
+        "loading": "加载中",
+        "backButtonText": "后退",
+        "alert": {
+            "ok": "确定",
+            "info": "提示",
+            "cancel": "取消"
+        },
+        "initialize": "初始化中",
+        "empty": ""
+    },
+    "desktop": {
+        "profiles": {
+            "title": "个人中心",
+            "setting": "设置",
+            "changeCompany": "公司/角色",
+            "changeLanguage": "语言",
+            "logout": "退出登录"
+        },
+        "modules": {
+            "title": "模块",
+            "invoice": "发票",
+            "pes": "物流",
+            "po": "订单"
+        }
+    }
+}
