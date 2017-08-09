@@ -1618,7 +1618,7 @@ var IntroductionPage = (function () {
         this.navParams = navParams;
     }
     IntroductionPage.prototype.ionViewDidLoad = function () {
-        console.log('');
+        console.log('%cWelcome to YTWO', 'color: green;');
     };
     IntroductionPage.prototype.enter = function () {
         this.navCtrl.push('basic-login');
@@ -1633,9 +1633,10 @@ IntroductionPage = __decorate([
         selector: 'page-introduction-page',template:/*ion-inline-start:"/Users/hay/workspace/YTWO/YTWO.Phone/src/app/basic/pages/introduction/introduction-page.html"*/'<!--\n  Generated template for the IntroductionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-slides pager>\n\n  <ion-slide style="background-color: fff">\n    <h2>Slide 1</h2>\n  </ion-slide>\n\n  <ion-slide style="background-color: fff">\n    <h2>Slide 2</h2>\n  </ion-slide>\n\n  <ion-slide style="background-color: fff">\n    <h2>Slide 3</h2>\n    <button type="button" (click)="enter()" ion-button color="secondary">{{\'basic.enter\' | translate}}</button>\n  </ion-slide>\n\n</ion-slides>\n'/*ion-inline-end:"/Users/hay/workspace/YTWO/YTWO.Phone/src/app/basic/pages/introduction/introduction-page.html"*/,
         changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectionStrategy */].OnPush
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]) === "function" && _b || Object])
 ], IntroductionPage);
 
+var _a, _b;
 //# sourceMappingURL=introduction-page.js.map
 
 /***/ }),

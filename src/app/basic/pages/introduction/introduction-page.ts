@@ -21,7 +21,7 @@ export class IntroductionPage {
 	}
 
 	ionViewDidLoad() {
-		console.log('');
+		console.log('%cWelcome to YTWO', 'color: green;');
 	}
 	enter() {
 		this.navCtrl.push('basic-login');
