@@ -1,10 +1,14 @@
-webpackJsonp([0],{
+webpackJsonp([2],{
 
 /***/ 130:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
-	return new Promise(function(resolve, reject) { reject(new Error("Cannot find module '" + req + "'.")); });
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
 }
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
@@ -17,6 +21,14 @@ webpackEmptyAsyncContext.id = 130;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"../pages/about/about.module": [
+		341,
+		1
+	],
+	"../pages/page1/page1.module": [
+		342,
+		0
+	],
 	"basic/pages/company-page/company-page.module": [
 		189
 	],
@@ -50,8 +62,8 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-module.exports = webpackAsyncContext;
 webpackAsyncContext.id = 173;
+module.exports = webpackAsyncContext;
 
 /***/ }),
 
@@ -1229,7 +1241,9 @@ AppModule = __decorate([
                     { loadChildren: 'basic/pages/company-page/company-page.module#CompanyPageModule', name: 'basic-company', segment: 'company-page', priority: 'low', defaultHistory: [] },
                     { loadChildren: 'desktop/pages/modules-page/modules-page.module#ModulesPageModule', name: 'ModulesPage', segment: 'modules-page', priority: 'low', defaultHistory: [] },
                     { loadChildren: 'desktop/pages/profiles-page/profiles-page.module#ProfilesPageModule', name: 'ProfilesPage', segment: 'profiles-page', priority: 'low', defaultHistory: [] },
-                    { loadChildren: 'desktop/pages/desktop-page/desktop-page.module#DesktopPageModule', name: 'desktop', segment: 'desktop-page', priority: 'low', defaultHistory: [] }
+                    { loadChildren: 'desktop/pages/desktop-page/desktop-page.module#DesktopPageModule', name: 'desktop', segment: 'desktop-page', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/about/about.module#AboutPageModule', name: 'AboutPage', segment: 'about', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/page1/page1.module#Page1PageModule', name: 'Page1Page', segment: 'page1', priority: 'low', defaultHistory: [] }
                 ]
             }),
             __WEBPACK_IMPORTED_MODULE_5__basic_basic_module__["a" /* BasicModule */],
@@ -1477,7 +1491,7 @@ __decorate([
 ], LoginLanguageList.prototype, "fab", void 0);
 LoginLanguageList = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'login-language-list',template:/*ion-inline-start:"/Users/hay/workspace/YTWO/YTWO.Phone/src/app/basic/pages/components/login-language-list/login-language-list.html"*/'<!-- Generated template for the LoginLanguageList component -->\n  <ion-fab right bottom #fab>\n    <button ion-fab color="light">{{selected}}</button>\n    <ion-fab-list side="top">\n      <button ion-fab *ngFor="let item of languageList" (click)="changeLang(item)">{{item}}</button>\n    </ion-fab-list>\n  </ion-fab>\n'/*ion-inline-end:"/Users/hay/workspace/YTWO/YTWO.Phone/src/app/basic/pages/components/login-language-list/login-language-list.html"*/
+        selector: 'login-language-list',template:/*ion-inline-start:"/Users/hay/workspace/YTWO/YTWO.Phone/src/app/basic/components/login-language-list/login-language-list.html"*/'<!-- Generated template for the LoginLanguageList component -->\n  <ion-fab right bottom #fab>\n    <button ion-fab color="light">{{selected}}</button>\n    <ion-fab-list side="top">\n      <button ion-fab *ngFor="let item of languageList" (click)="changeLang(item)">{{item}}</button>\n    </ion-fab-list>\n  </ion-fab>\n'/*ion-inline-end:"/Users/hay/workspace/YTWO/YTWO.Phone/src/app/basic/components/login-language-list/login-language-list.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__platform_services_platform_context_service__["a" /* PlatformContextService */]])
 ], LoginLanguageList);
@@ -1618,7 +1632,7 @@ var IntroductionPage = (function () {
         this.navParams = navParams;
     }
     IntroductionPage.prototype.ionViewDidLoad = function () {
-        console.log('%cWelcome to YTWO', 'color: green;');
+        console.log('%c', 'background: url(http://localhost:8100/assets/img/logo@2x.png) no-repeat;line-height:150px;padding:50px 100px;background-size:200px');
     };
     IntroductionPage.prototype.enter = function () {
         this.navCtrl.push('basic-login');
@@ -1630,13 +1644,12 @@ IntroductionPage = __decorate([
         name: 'basic-introduction'
     }),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-introduction-page',template:/*ion-inline-start:"/Users/hay/workspace/YTWO/YTWO.Phone/src/app/basic/pages/introduction/introduction-page.html"*/'<!--\n  Generated template for the IntroductionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-slides pager>\n\n  <ion-slide style="background-color: fff">\n    <h2>Slide 1</h2>\n  </ion-slide>\n\n  <ion-slide style="background-color: fff">\n    <h2>Slide 2</h2>\n  </ion-slide>\n\n  <ion-slide style="background-color: fff">\n    <h2>Slide 3</h2>\n    <button type="button" (click)="enter()" ion-button color="secondary">{{\'basic.enter\' | translate}}</button>\n  </ion-slide>\n\n</ion-slides>\n'/*ion-inline-end:"/Users/hay/workspace/YTWO/YTWO.Phone/src/app/basic/pages/introduction/introduction-page.html"*/,
+        selector: 'page-introduction-page',template:/*ion-inline-start:"/Users/hay/workspace/YTWO/YTWO.Phone/src/app/basic/pages/introduction/introduction-page.html"*/'<!--\n  Generated template for the IntroductionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-slides pager>\n\n  <ion-slide style="background-color: fff">\n    <h2>Slide 1</h2>\n  </ion-slide>\n\n  <ion-slide style="background-color: fff">\n    <h2>Slide 2</h2>\n  </ion-slide>\n\n  <ion-slide>\n    <h2>Slide 3</h2>\n    <button type="button" (click)="enter()" ion-button color="secondary">{{\'basic.enter\' | translate}}</button>\n  </ion-slide>\n\n</ion-slides>\n'/*ion-inline-end:"/Users/hay/workspace/YTWO/YTWO.Phone/src/app/basic/pages/introduction/introduction-page.html"*/,
         changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectionStrategy */].OnPush
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
 ], IntroductionPage);
 
-var _a, _b;
 //# sourceMappingURL=introduction-page.js.map
 
 /***/ }),
@@ -1968,7 +1981,7 @@ __decorate([
 ], CompanyTree.prototype, "goToDesktop", void 0);
 CompanyTree = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'company-tree',template:/*ion-inline-start:"/Users/hay/workspace/YTWO/YTWO.Phone/src/app/basic/pages/components/company-tree/company-tree.html"*/'<!-- Generated template for the CompanyTree component -->\n<ion-list>\n<button ion-item *ngFor="let item of companies" (click)="itemSelected(item)">\n    <svg-icon [width]="16" [height]="16" [id]="classByType(item)"></svg-icon>\n    {{item.name}}\n</button>\n\n</ion-list>\n'/*ion-inline-end:"/Users/hay/workspace/YTWO/YTWO.Phone/src/app/basic/pages/components/company-tree/company-tree.html"*/,
+        selector: 'company-tree',template:/*ion-inline-start:"/Users/hay/workspace/YTWO/YTWO.Phone/src/app/basic/components/company-tree/company-tree.html"*/'<!-- Generated template for the CompanyTree component -->\n<ion-list>\n<button ion-item *ngFor="let item of companies" (click)="itemSelected(item)">\n    <svg-icon [width]="16" [height]="16" [id]="classByType(item)"></svg-icon>\n    {{item.name}}\n</button>\n\n</ion-list>\n'/*ion-inline-end:"/Users/hay/workspace/YTWO/YTWO.Phone/src/app/basic/components/company-tree/company-tree.html"*/,
         changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectionStrategy */].OnPush
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */],
@@ -3139,7 +3152,9 @@ var BasicCompanyService = (function () {
                 _this.http.$get('/basics/company/getassignedcompanieswithroles')
                     .map(function (data) {
                     _this.LoadingService.hide();
-                    return _this.setMasterData(data);
+                    _this.setMasterData(data);
+                    _this.setLinearData(data.companies);
+                    return data.companies;
                 })
                     .subscribe(function (data) {
                     ob.next(data);
@@ -3153,11 +3168,11 @@ var BasicCompanyService = (function () {
         //   return this.setMasterData(data);
         // });
     };
-    BasicCompanyService.prototype.setLinearData = function () {
+    BasicCompanyService.prototype.setLinearData = function (companies) {
         var _data = [];
-        this.masterData.companies.forEach(function (item) {
+        companies.forEach(function (item) {
             var _obj = {};
-            $.extend(_obj, item);
+            Object.assign(_obj, item);
             _data.push(_obj);
         });
         _data = this.toLinear(_data);
@@ -3166,7 +3181,6 @@ var BasicCompanyService = (function () {
     };
     BasicCompanyService.prototype.setMasterData = function (data) {
         this.masterData = data;
-        this.setLinearData();
         return data.companies;
         // let _data = this.toLinear(this.masterData.companies.concat());
         // this.linearData = new DataStructureService<ICompany>('id', _data);

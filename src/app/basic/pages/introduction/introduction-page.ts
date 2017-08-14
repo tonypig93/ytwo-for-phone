@@ -21,7 +21,7 @@ export class IntroductionPage {
 	}
 
 	ionViewDidLoad() {
-		console.log('%cWelcome to YTWO', 'color: green;');
+		console.log('%c', 'background: url(http://localhost:8100/assets/img/logo@2x.png) no-repeat;line-height:150px;padding:50px 100px;background-size:200px');
 	}
 	enter() {
 		this.navCtrl.push('basic-login');

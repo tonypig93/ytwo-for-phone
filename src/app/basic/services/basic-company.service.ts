@@ -25,7 +25,7 @@ export class BasicCompanyService {
 		private PlatformContextService: PlatformContextService) {
 		
 	}
-	getCompanyList() {
+	getCompanyList(): Observable<any> {
 		return Observable.create(ob => {
 			if (this.masterData) {
 				ob.next(this.masterData.companies);
@@ -35,7 +35,9 @@ export class BasicCompanyService {
 				this.http.$get('/basics/company/getassignedcompanieswithroles')
 				.map((data: IAssignedCompany) => {
 					this.LoadingService.hide();
-					return this.setMasterData(data);
+					this.setMasterData(data);
+					this.setLinearData(data.companies);
+					return data.companies;
 				})
 				.subscribe(data => {
 					ob.next(data);
@@ -49,11 +51,11 @@ export class BasicCompanyService {
 		//   return this.setMasterData(data);
 		// });
 	}
-	private setLinearData() {
+	private setLinearData(companies: ICompany []) {
 		let _data = [];
-		this.masterData.companies.forEach(item => {
+		companies.forEach(item => {
 			let _obj = {};
-			$.extend(_obj, item);
+			Object.assign(_obj, item);
 			_data.push(_obj);
 		});
 		_data = this.toLinear(_data);
@@ -62,7 +64,6 @@ export class BasicCompanyService {
 	}
 	private setMasterData (data:IAssignedCompany): Array<ICompany> {
 		this.masterData = data;
-		this.setLinearData();
 		return data.companies;
 		// let _data = this.toLinear(this.masterData.companies.concat());
 		// this.linearData = new DataStructureService<ICompany>('id', _data);
@@ -114,7 +115,7 @@ export class BasicCompanyService {
 		}
 		return null;
 	}
-	getRoleList(company: ICompany) {
+	getRoleList(company: ICompany): IRoleLookup [] {
 		if (company.companyType === 2) 
 			return null;
 		const roleIds = this._getRoleList(company.id, this.masterData.roles);
