@@ -13,6 +13,10 @@ page-login-page {
         align-items: center;
         height: 100%;
         width: 100%;
+        flex-direction: column;
+    }
+    ion-list {
+        width: 100%;
     }
     ion-list ion-item {
         background-color: transparent!important;

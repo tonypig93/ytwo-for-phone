@@ -9,6 +9,7 @@ import { HttpConfigService } from './http-config.service';
 import { AlertService } from '../services/alert.service';
 import { NetworkService } from '../services/network.service';
 
+
 window['$'] = window['jQuery'] = $;
 
 function mergeOptions(

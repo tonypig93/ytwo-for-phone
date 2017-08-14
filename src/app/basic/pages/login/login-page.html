@@ -13,12 +13,26 @@
 </ion-header>-->
 
 
-<ion-content padding>
-<div ion-fixed class="login-main">
-    <ion-list>
-      <div style="text-align: center; margin-bottom: 20px;">
+<ion-content>
+<div ion-fixed padding class="login-main">
+  <div style="text-align: center;">
+        <svg-icon width="100%" height="auto" [id]="'svg-icon-ytwo-logo'"></svg-icon>
+  </div>
+  <ion-list>
+    <ion-item>
+        <ion-input type="text" [(ngModel)]="formData.username" placeholder="Username"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="password" [(ngModel)]="formData.password" placeholder="Password"></ion-input>
+      </ion-item>
+  </ion-list>
+  <button button-block type="button" class="login-button" (click)="login()" ion-button block  color="secondary"><y2-translate [text]="'basic.login'"></y2-translate></button>
+  <button button-block type="button" class="login-button" (click)="serverConfig()" ion-button block  color="light"><y2-translate [text]="'basic.server'"></y2-translate></button>
+    <!-- <ion-list>
+       <div style="text-align: center; margin-bottom: 20px;">
         <svg-icon [width]="'26rem'" [height]="'80px'" [id]="'svg-icon-ytwo-logo'"></svg-icon>
-      </div>
+      </div> 
       <ion-item>
         <ion-input type="text" [(ngModel)]="formData.username" placeholder="Username"></ion-input>
       </ion-item>
@@ -27,12 +41,12 @@
         <ion-input type="password" [(ngModel)]="formData.password" placeholder="Password"></ion-input>
       </ion-item>
       <div style="margin-bottom: 20px">
-        <button type="button" class="login-button" (click)="login()" ion-button block  color="secondary"><y2-translate [text]="'basic.login'"></y2-translate></button>
+        <button button-block type="button" class="login-button" (click)="login()" ion-button block  color="secondary"><y2-translate [text]="'basic.login'"></y2-translate></button>
       </div>
       <div>
-        <button type="button" class="login-button" (click)="serverConfig()" ion-button block  color="light"><y2-translate [text]="'basic.server'"></y2-translate></button>
+        <button button-block type="button" class="login-button" (click)="serverConfig()" ion-button block  color="light"><y2-translate [text]="'basic.server'"></y2-translate></button>
       </div>
-    </ion-list>
+    </ion-list> -->
     <login-language-list></login-language-list>
 </div>
 </ion-content>
