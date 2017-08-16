@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 
 /**
  * Generated class for the IntroductionPage page.
@@ -17,13 +17,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class IntroductionPage {
 
-	constructor(public navCtrl: NavController, public navParams: NavParams) {
+	constructor(
+		public navCtrl: NavController,
+		public navParams: NavParams,
+		private ViewController: ViewController) {
 	}
 
 	ionViewDidLoad() {
 		console.log('%c', 'background: url(http://localhost:8100/assets/img/logo@2x.png) no-repeat;line-height:150px;padding:50px 100px;background-size:200px');
 	}
 	enter() {
-		this.navCtrl.push('basic-login');
+		this.navCtrl.push('basic-login', {}, {
+			animation: 'wp-transition'
+		});
 	}
+	// ionViewWillLeave() {
+	// 	var dom = $(this.ViewController.pageRef().nativeElement);
+	// 	dom.fadeOut();
+	// }
 }

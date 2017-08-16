@@ -4,7 +4,7 @@
   "author": "YTWO mobility",
   "scripts": {
     "clean": "ionic-app-scripts clean",
-    "build": "ionic-app-scripts build",
+    "build": "ionic-app-scripts build --prod --aot --minifyjs --minifycss",
     "lint": "ionic-app-scripts lint",
     "ionic:build": "ionic-app-scripts build",
     "serve": "ionic-app-scripts serve",

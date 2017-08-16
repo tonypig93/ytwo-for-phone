@@ -24,7 +24,7 @@ export class RootPage {
 	}
 	async ionViewCanEnter() {
 		const touched = await this.PlatformContextService.isFirstTimeRun();
-		if (touched) {
+		if (1) {
 			this.nav.push('basic-introduction', {}, { animate: false });
 		} else {
 			this.PlatformContextService.isSignedIn()

@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
@@ -26,6 +25,8 @@
 		BE488A3BFAA14D2B84C9EC32 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7713AFB0962E4EEB9D03708C /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E4E7789A7022467C8F04ADFC /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F0242C513F4811A8A9D5C2 /* CDVViewController+SplashScreen.m */; };
 		F269D3FA188B49CBB537C9A9 /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C875399E154383A072A30B /* CDVStatusBar.m */; };
+		AD65DCE1C09C45E7823D3F7E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D155B656BE4E4091973DD6 /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AF6C9E33444A4DAFA7F161F5 /* libz.tbd in Resources */ = {isa = PBXBuildFile; fileRef = 559BCC5371FC400DB7414FD8 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = YTWO.Phone/config.xml; sourceTree = "<group>"; };
+		93D155B656BE4E4091973DD6 /* WebKit.framework */ = {isa = PBXFileReference; name = "WebKit.framework"; path = "System/Library/Frameworks/WebKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		559BCC5371FC400DB7414FD8 /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "libz.tbd"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				BE488A3BFAA14D2B84C9EC32 /* SystemConfiguration.framework in Frameworks */,
 				B1C427C8E86A4AFCA2F683B1 /* CoreTelephony.framework in Frameworks */,
+				AD65DCE1C09C45E7823D3F7E /* WebKit.framework in Frameworks */,
+				AF6C9E33444A4DAFA7F161F5 /* libz.tbd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +169,8 @@
 			children = (
 				7713AFB0962E4EEB9D03708C /* SystemConfiguration.framework */,
 				ABF1E2FE615C464794232B16 /* CoreTelephony.framework */,
+				93D155B656BE4E4091973DD6 /* WebKit.framework */,
+				559BCC5371FC400DB7414FD8 /* libz.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

@@ -10,7 +10,6 @@ import { HttpConfigService } from './services/http-config.service';
 import { LoginGuard, TokenGuard } from './services/page-gate.service';
 import { AlertService } from './services/alert.service';
 import { NetworkService } from './services/network.service';
-import '../../../node_modules/jquery/dist/jquery.min.js';
 
 export function HttpServiceFactory (
 	_backend: XHRBackend, 
